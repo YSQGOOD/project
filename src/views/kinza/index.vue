@@ -1,23 +1,1030 @@
 <template>
   <div class="kinza-page">
-    <!-- <object
-      data="./src/components/html/kinza.html"
-      ref="webPage"
-      type="text/html"
-      style="width: 100%; height: 99%;"
-    ></object> -->
+    <div class="header flex">
+      <div class="left flex">
+        <img src="@/assets/svg/s4/logo.svg" />
+        <img src="@/assets/svg/s4/logoTitle.svg" />
+      </div>
+      <div class="middle flex">
+        <div class="tab">HOME</div>
+        <div class="tab">DOCS</div>
+        <div class="tab">ANLLYTICS</div>
+      </div>
+      <div class="right flex">
+        <div class="icon">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.335 24C19.7653 24 23.8282 17.8429 23.8282 12.5068C23.8282 12.3309 23.8281 12.155 23.8198 11.9874C24.6072 11.4178 25.2941 10.7058 25.8386 9.89319C25.1182 10.2115 24.3391 10.4293 23.5182 10.5298C24.3559 10.0272 24.9925 9.23979 25.2941 8.29319C24.5151 8.75393 23.6522 9.089 22.7308 9.2733C21.9936 8.48586 20.9465 8 19.7821 8C17.5538 8 15.7444 9.80942 15.7444 12.0377C15.7444 12.356 15.7779 12.666 15.8533 12.9592C12.4941 12.7916 9.5203 11.1832 7.52658 8.73717C7.18312 9.33194 6.98208 10.0272 6.98208 10.7644C6.98208 12.1634 7.69412 13.4031 8.78312 14.1236C8.12134 14.1068 7.50145 13.9225 6.95694 13.6209C6.95694 13.6377 6.95694 13.6544 6.95694 13.6712C6.95694 15.6314 8.34752 17.2565 10.1988 17.6335C9.86375 17.7257 9.50354 17.7759 9.13496 17.7759C8.87527 17.7759 8.62396 17.7508 8.37265 17.7005C8.88365 19.3089 10.3747 20.4733 12.1423 20.5068C10.7601 21.5874 9.01768 22.2325 7.12448 22.2325C6.79778 22.2325 6.47946 22.2157 6.16113 22.1738C7.92867 23.3298 10.0564 24 12.335 24Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="icon">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24 10C24 10 21.7075 8.206 19 8L18.756 8.488C21.204 9.087 22.327 9.9455 23.5 11C21.4775 9.9675 19.4805 9 16 9C12.5195 9 10.5225 9.9675 8.5 11C9.673 9.9455 11.009 8.9925 13.244 8.488L13 8C10.1595 8.2685 8 10 8 10C8 10 5.4395 13.7125 5 21C7.581 23.9765 11.5 24 11.5 24L12.3195 22.9075C10.9285 22.424 9.3575 21.5605 8 20C9.619 21.225 12.0625 22.5 16 22.5C19.9375 22.5 22.381 21.225 24 20C22.6425 21.5605 21.0715 22.424 19.6805 22.9075L20.5 24C20.5 24 24.419 23.9765 27 21C26.5605 13.7125 24 10 24 10ZM12.75 19C11.7835 19 11 18.1045 11 17C11 15.8955 11.7835 15 12.75 15C13.7165 15 14.5 15.8955 14.5 17C14.5 18.1045 13.7165 19 12.75 19ZM19.25 19C18.2835 19 17.5 18.1045 17.5 17C17.5 15.8955 18.2835 15 19.25 15C20.2165 15 21 15.8955 21 17C21 18.1045 20.2165 19 19.25 19Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="icon">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.67391 14.8879C12.8565 12.6299 16.3124 11.1413 18.0415 10.4221C22.9786 8.36862 24.0045 8.0119 24.6731 8.00013C24.8202 7.99753 25.149 8.03398 25.362 8.20682C25.5419 8.35275 25.5914 8.5499 25.615 8.68826C25.6387 8.82663 25.6682 9.14183 25.6448 9.38811C25.3772 12.1992 24.2196 19.021 23.6306 22.1694C23.3814 23.5017 22.8907 23.9484 22.4157 23.9921C21.3833 24.0871 20.5993 23.3098 19.5994 22.6543C18.0347 21.6287 17.1508 20.9902 15.632 19.9893C13.8768 18.8327 15.0146 18.1969 16.0149 17.158C16.2767 16.8861 20.8254 12.7487 20.9135 12.3733C20.9245 12.3264 20.9347 12.1514 20.8308 12.059C20.7268 11.9666 20.5734 11.9982 20.4627 12.0234C20.3057 12.059 17.8062 13.7111 12.9639 16.9798C12.2544 17.467 11.6118 17.7044 11.036 17.6919C10.4012 17.6782 9.1802 17.333 8.2725 17.038C7.15916 16.6761 6.27431 16.4847 6.35136 15.8701C6.39149 15.55 6.83234 15.2226 7.67391 14.8879Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="icon">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17.8526 16C17.8526 20.4183 14.2781 24 9.86867 24C5.45928 24 1.88477 20.4183 1.88477 16C1.88477 11.5817 5.45928 8 9.86867 8C14.2781 8 17.8526 11.5817 17.8526 16ZM26.486 15.9525C26.486 20.1009 24.7095 23.4639 22.5182 23.4639C20.3268 23.4639 18.5504 20.1009 18.5504 15.9525C18.5504 11.8041 20.3268 8.44111 22.5182 8.44111C24.7095 8.44111 26.486 11.8041 26.486 15.9525ZM28.6654 22.6973C29.466 22.6973 30.1151 19.6541 30.1151 15.9001C30.1151 12.146 29.466 9.10277 28.6654 9.10277C27.8648 9.10277 27.2157 12.146 27.2157 15.9001C27.2157 19.6541 27.8648 22.6973 28.6654 22.6973Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="icon">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.924 13.5706C22.924 12.4048 22.5292 11.4378 21.8552 10.6798C21.9284 10.5158 22.0046 10.2958 22.0425 10.0192C22.1294 9.3884 22.0269 9.0099 21.94 8.63947C21.8532 8.26905 21.7507 8.00864 21.7507 8.00864C21.7507 8.00864 21.2852 7.9612 20.8909 8.09544C20.4966 8.22968 20.1573 8.33213 19.6681 8.62383C19.4394 8.76009 19.2092 8.90947 19.0269 9.03059C18.2479 8.81459 17.3911 8.70356 16.4899 8.70356C15.5806 8.70356 14.7163 8.8151 13.9317 9.03261C13.749 8.91098 13.5172 8.76059 13.287 8.62332C12.7978 8.33163 12.4585 8.22918 12.0642 8.09494C11.6699 7.9607 11.2044 8.00813 11.2044 8.00813C11.2044 8.00813 11.1019 8.26854 11.0151 8.63897C10.9282 9.00939 10.8257 9.38789 10.9126 10.0187C10.9515 10.3023 11.0302 10.5264 11.1054 10.6914C10.4441 11.4449 10.0563 12.4058 10.0563 13.5701C10.0563 16.5895 11.6881 17.9677 14.6613 18.3316C14.3144 18.698 14.0817 19.1673 14.0034 19.6896C13.808 19.7754 13.5829 19.8562 13.3663 19.8885C12.8089 19.9728 12.2197 19.8885 11.936 19.7204C11.6522 19.5524 11.3155 19.1739 11.063 18.8055C10.85 18.4946 10.5425 18.1338 10.2638 18.0066C9.89577 17.8385 9.53781 17.7754 9.33838 17.8067C9.13845 17.8385 9.04404 17.9854 9.08595 18.0909C9.12785 18.1958 9.32778 18.3538 9.53831 18.4694C9.74885 18.5849 10.075 18.9003 10.2643 19.2052C10.4754 19.5453 10.5168 19.7416 10.6955 20.1302C10.8212 20.4037 11.2513 20.7454 11.5578 20.9291C11.8208 21.0871 12.3464 21.1769 12.9149 21.2026C13.1113 21.2117 13.5753 21.1542 13.9666 21.0987V22.9912C13.9666 23.3137 13.6712 23.5589 13.3653 23.5024C14.3472 23.8324 15.3959 24 16.4899 24C17.5835 24 18.6321 23.8324 19.6151 23.5034C19.3096 23.5594 19.0143 23.3142 19.0143 22.9917V20.0626C19.0143 19.3919 18.7482 18.7858 18.3211 18.3341C21.2726 17.9798 22.924 16.6344 22.924 13.5706ZM10.0472 18.3109C9.96948 18.271 9.92757 18.1973 9.95383 18.1454C9.98008 18.0934 10.0649 18.0838 10.1426 18.1237C10.2204 18.1635 10.2623 18.2372 10.236 18.2892C10.2098 18.3412 10.125 18.3508 10.0472 18.3109ZM10.6591 18.6919C10.6182 18.7363 10.5304 18.7222 10.4627 18.6606C10.3951 18.5991 10.3734 18.5128 10.4143 18.4684C10.4552 18.4239 10.543 18.4381 10.6107 18.4996C10.6783 18.5612 10.7 18.6475 10.6591 18.6919ZM11.0398 19.3228C10.9883 19.3591 10.901 19.3253 10.8449 19.2471C10.7889 19.1688 10.7854 19.0755 10.8368 19.0391C10.8883 19.0028 10.9757 19.0366 11.0317 19.1148C11.0873 19.1931 11.0913 19.2864 11.0398 19.3228ZM11.5866 19.7976C11.5517 19.8542 11.4528 19.8567 11.366 19.8037C11.2791 19.7507 11.2367 19.6619 11.2715 19.6054C11.3064 19.5488 11.4053 19.5463 11.4922 19.5993C11.579 19.6523 11.6214 19.7411 11.5866 19.7976ZM12.1036 20.2624C11.996 20.2493 11.9163 20.1822 11.9254 20.1126C11.9339 20.0429 12.0283 19.9975 12.1354 20.0106C12.2429 20.0237 12.3227 20.0909 12.3136 20.1605C12.305 20.2296 12.2111 20.2756 12.1036 20.2624ZM12.9371 20.3831C12.8225 20.3765 12.7332 20.3109 12.7377 20.2372C12.7422 20.1635 12.8387 20.1085 12.9533 20.1151C13.0679 20.1216 13.1572 20.1872 13.1527 20.2609C13.1482 20.3351 13.0517 20.3896 12.9371 20.3831ZM13.7237 20.3043C13.6015 20.3043 13.5026 20.2407 13.5026 20.1625C13.5026 20.0843 13.6015 20.0207 13.7237 20.0207C13.8459 20.0207 13.9448 20.0843 13.9448 20.1625C13.9448 20.2407 13.8454 20.3043 13.7237 20.3043Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="app">APP</div>
+        <div class="home">
+          <svg t="1753004324445" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5948" width="48" height="48"><path d="M853.333 247.467H170.667c-17.067 0-34.134-17.067-34.134-34.134S153.6 179.2 170.667 179.2h682.666c17.067 0 34.134 17.067 34.134 34.133s-17.067 34.134-34.134 34.134z m0 298.666H170.667c-17.067 0-34.134-17.066-34.134-34.133s17.067-34.133 34.134-34.133h682.666c17.067 0 34.134 17.066 34.134 34.133s-17.067 34.133-34.134 34.133z m0 298.667H170.667c-17.067 0-34.134-17.067-34.134-34.133s17.067-34.134 34.134-34.134h682.666c17.067 0 34.134 17.067 34.134 34.134S870.4 844.8 853.333 844.8z" fill="#59532d" p-id="5949"></path></svg>
+        </div>
+      </div>
+    </div>
+    <div class="row1">
+      <div class="content">
+        <div class="flex title-box">
+          <div class="title">
+            AIRDROP&nbsp; POINTS &nbsp;<span>SEASON 2 &nbsp;</span>HAS ARRIVED.
+          </div>
+          <div class="btn">DEPOSIT NOW</div>
+        </div>
+        <div class="text-img">
+          <img src="@/assets/svg/s4/yellow.svg" />
+        </div>
+        <div class="sub-t">AI-POWERED LENDING FOR RWA AND EMERGING ASSETS</div>
+        <div class="tab-btn flex">
+          <div class="tab">SECURE MONEY MARKET</div>
+          <div class="tab">BTCLRT</div>
+          <div class="tab">MODULAR PERMISSIONLESS LENDING</div>
+        </div>
+        <div class="total flex">
+          <div class="left">
+            <div class="text-box">
+              <div class="line"></div>
+              <div class="text-box flex">
+                <div class="icon"><img src="@/assets/svg/s4/gz1.svg" /></div>
+                <div class="text">Total Value Secured</div>
+                <div class="icon fan"><img src="@/assets/svg/s4/gz1.svg" /></div>
+              </div>
+              <div class="line"></div>
+            </div>
+            
+            <div class="value">$20,554,440</div>
+          </div>
+          <div class="live">
+            <div class="flex">
+              <div class="line line2"></div>
+              <div class="icon line-icon">
+                <img src="@/assets/svg/s4/gz1.svg" />
+              </div>
+              <div class="text">LIVE ON</div>
+              <div class="icon fan line-icon">
+                <img src="@/assets/svg/s4/gz1.svg" />
+              </div>
+              <div class="line line2"></div>
+            </div>
+            <div class="icon-list flex">
+              <div class="icon"><img src="@/assets/svg/s4/chian.svg" /></div>
+              <div class="icon"><img src="@/assets/svg/s4/opbnb.svg" /></div>
+              <div class="icon"><img src="@/assets/svg/s4/ethereum.svg" /></div>
+              <div class="icon"><img src="@/assets/svg/s4/mantle.svg" /></div>
+              <div class="icon"><img src="@/assets/svg/s4/monad.svg" /></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fea">
+          <div class="title">Featured On</div>
+          <div class="scroll">
+            <AdScroller :speed="80" :delay="5">
+              <img v-for="item in adList" :key="item.id" :src="item.icon"/>
+            </AdScroller>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="flex">
+        <div class="leading-left">
+          <div class="img-box">
+            <img src="@/assets/svg/s4/ca1.svg" alt="" />
+          </div>
+          <div class="text-box">
+            <div class="title">Leading Security Standards</div>
+            <div class="sub-t">
+              We implement best-practice security measures, which include frequent
+              audits, bug bounty programs, economic risk assessment, incident
+              response planning, and real-time monitoring.
+            </div>
+            <div class="img-list flex">
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg1.svg" alt="" />
+              </div>
+              <div class="img-box">
+                <img src="@/assets/images/img4/lg2.png" alt="" />
+              </div>
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg3.svg" alt="" />
+              </div>
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg4.svg" alt="" />
+              </div>
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg5.svg" alt="" />
+              </div>
+
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg6.svg" alt="" />
+              </div>
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg7.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="leading-right">
+          <div class="img-box">
+            <img src="@/assets/svg/s4/ca2.svg" alt="" />
+          </div>
+          <div class="text-box">
+            <div class="title">Leading Security Standards</div>
+            <div class="sub-t">
+              We implement best-practice security measures, which include frequent
+              audits, bug bounty programs, economic risk assessment, incident
+              response planning, and real-time monitoring.
+            </div>
+            <div class="img-list flex">
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg8.svg" alt="" />
+              </div>
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg9.svg" alt="" />
+              </div>
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg10.svg" alt="" />
+              </div>
+              <div class="img-box">
+                <svg
+                  width="79"
+                  height="29"
+                  viewBox="0 0 79 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27.9039 21.6938C33.0169 23.8912 37.3935 16.8121 32.5969 13.2695C30.5274 11.7356 27.8978 12.1738 26.1082 13.9025C23.3001 16.6254 20.5813 19.3524 17.9517 22.0834C16.3082 23.7958 14.7723 24.9219 13.3439 25.4616C9.19868 27.026 4.49955 25.3642 2.33868 21.4869C-0.424793 16.526 2.01608 10.6886 7.19608 8.8686C10.2233 7.80135 13.1572 8.33701 15.9978 10.4756C16.9535 11.1999 17.483 12.3503 16.6491 13.4399C14.9265 15.6921 13.3865 13.166 11.7552 12.6303C5.71086 10.646 2.4239 19.3138 8.33434 21.7242C10.2781 22.5196 12.1082 22.0814 13.8248 20.4095C17.1685 17.1428 20.3256 14.0182 23.2961 11.0356C27.5326 6.79295 34.2161 7.63903 37.4178 12.6608C39.2378 15.5095 39.1222 19.326 37.15 22.1199C33.0717 27.8903 24.4587 27.2451 21.5065 20.6529C21.4619 20.5556 21.4781 20.4683 21.5552 20.3912C23.1216 18.7599 24.1949 17.6845 24.7752 17.1651C24.7787 17.1631 24.7827 17.1619 24.7867 17.1618C24.7908 17.1616 24.7948 17.1625 24.7984 17.1643C24.802 17.1662 24.8052 17.1688 24.8075 17.1722C24.8098 17.1755 24.8113 17.1794 24.8117 17.1834C24.9619 19.3706 25.9926 20.8741 27.9039 21.6938Z"
+                    fill="#3B85F9"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M47.8321 8.40225C46.6959 8.46718 45.6307 8.8324 44.6365 9.49791C44.255 9.7495 44.0643 9.64602 44.0643 9.18747L44.0826 5.12747C44.0907 3.90196 43.4901 3.17559 42.2808 2.94834C42.0739 2.90776 41.8669 2.91385 41.66 2.9666C40.6292 3.21414 40.1119 3.8695 40.1078 4.93269C40.1037 8.72689 40.0855 12.7179 40.053 16.9057C40.0043 23.4675 46.28 27.7466 52.2939 25.4518C53.5153 24.9852 55.0614 23.8023 56.9321 21.9031C59.6145 19.1843 62.4003 16.4472 65.2895 13.6918C70.153 9.05356 77.2565 17.0092 71.2913 21.2396C70.4188 21.8605 69.4936 22.1405 68.5156 22.0796C65.813 21.9092 64.1614 20.2962 63.5608 17.2405C63.559 17.231 63.5544 17.2223 63.5476 17.2153C63.5408 17.2083 63.532 17.2034 63.5222 17.2009C63.5123 17.1984 63.5016 17.1985 63.4913 17.2012C63.481 17.2039 63.4714 17.2091 63.4634 17.2162L60.3287 20.3753C60.2759 20.4281 60.2658 20.4869 60.2982 20.5518C63.6948 27.7283 73.4156 27.9475 76.7574 20.8501C78.3765 17.4049 77.4695 12.9614 74.5661 10.5875C71.3237 7.93762 67.9252 7.53993 64.3704 9.39443C62.6418 10.2994 60.9396 12.0897 59.3733 13.7368C58.9486 14.1835 58.5338 14.6197 58.1313 15.0249C57.9406 15.2196 57.8026 15.1872 57.7174 14.9275C56.1713 10.2852 52.8762 8.11008 47.8321 8.40225ZM53.8832 16.9849C53.8868 17.0617 53.8887 17.1389 53.8887 17.2162C53.8887 17.2495 53.8883 17.2828 53.8877 17.316C53.8351 19.9733 51.6646 22.1112 48.9947 22.1112C46.2919 22.1112 44.1008 19.9201 44.1008 17.2173C44.1008 16.2394 44.3876 15.3286 44.8816 14.5642C45.0684 14.2745 45.2867 14.0032 45.5342 13.7556C45.8799 13.41 46.2719 13.1214 46.6957 12.8959C47.0657 12.6986 47.464 12.5475 47.883 12.4502C48.2446 12.3658 48.6174 12.3223 48.9948 12.3223C49.3788 12.3223 49.7582 12.3674 50.1258 12.4547C50.5195 12.5479 50.8947 12.6886 51.2452 12.8704C51.6876 13.0995 52.0964 13.3968 52.4553 13.7556C52.7173 14.0176 52.9465 14.3063 53.1403 14.6152C53.5758 15.3075 53.8426 16.1166 53.8832 16.9849Z"
+                    fill="#3B85F9"
+                  ></path>
+                </svg>
+              </div>
+              <div class="img-box">
+                <img src="@/assets/svg/s4/lg12.svg" alt="" />
+              </div>
+              <div class="img-box last-img">
+                <img src="@/assets/images/img4/lg13.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parents">
+        <div class="flex title-box">
+          <div class="line"></div>
+          <div class="text-box">
+            <div class="icon"><img src="@/assets/svg/s4/gz1.svg" /></div>
+            <div class="text">PARTNERS</div>
+            <div class="icon fan"><img src="@/assets/svg/s4/gz1.svg" /></div>
+          </div>
+          <div class="line"></div>
+        </div>
+        <div class="partner-list flex">
+          <div v-for="item in parenters" :key="item.id" class="partner-item">
+            <img :src="item.icon" alt="Partners" />
+          </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="row3">
+      <img class="bg" src="@/assets/images/img4/btb.png"/>
+      <div class="flex btc">
+        <div class="btc-l">
+          <div><img src="@/assets/svg/s4/my.svg" /></div>
+          <div class="title">kBTC</div>
+        </div>
+        <div class="btc-r">
+          <div class="text-box flex">
+            <img src="@/assets/svg/s4/text.svg" />
+            <div class="text">Bitcoin<span> Staking is </span>LIVE</div>
+          </div>
+          <div class="sub-t">Unleash your BTC into DeFi</div>
+          <div class="sub-t">with Kinza Native BTCLRT kBTC</div>
+
+        <div class="babylon flex">
+          <div class="babylon-l flex">
+            <div class="img-box">
+              <img src="@/assets/svg/s4/babylon1.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="b-text">STAKING & RESTAKING</div>
+              <div class="b-text">POWERED BY</div>
+            </div>
+          </div>
+          <div class="babylon-r flex">
+            <div class="img-box">
+              <svg
+                width="auto"
+                height="29"
+                viewBox="0 0 79 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="BtcStaking_cobo__jyQyG"
+              >
+                <path
+                  d="M27.9039 21.6938C33.0169 23.8912 37.3935 16.8121 32.5969 13.2695C30.5274 11.7356 27.8978 12.1738 26.1082 13.9025C23.3001 16.6254 20.5813 19.3524 17.9517 22.0834C16.3082 23.7958 14.7723 24.9219 13.3439 25.4616C9.19868 27.026 4.49955 25.3642 2.33868 21.4869C-0.424793 16.526 2.01608 10.6886 7.19608 8.8686C10.2233 7.80135 13.1572 8.33701 15.9978 10.4756C16.9535 11.1999 17.483 12.3503 16.6491 13.4399C14.9265 15.6921 13.3865 13.166 11.7552 12.6303C5.71086 10.646 2.4239 19.3138 8.33434 21.7242C10.2781 22.5196 12.1082 22.0814 13.8248 20.4095C17.1685 17.1428 20.3256 14.0182 23.2961 11.0356C27.5326 6.79295 34.2161 7.63903 37.4178 12.6608C39.2378 15.5095 39.1222 19.326 37.15 22.1199C33.0717 27.8903 24.4587 27.2451 21.5065 20.6529C21.4619 20.5556 21.4781 20.4683 21.5552 20.3912C23.1216 18.7599 24.1949 17.6845 24.7752 17.1651C24.7787 17.1631 24.7827 17.1619 24.7867 17.1618C24.7908 17.1616 24.7948 17.1625 24.7984 17.1643C24.802 17.1662 24.8052 17.1688 24.8075 17.1722C24.8098 17.1755 24.8113 17.1794 24.8117 17.1834C24.9619 19.3706 25.9926 20.8741 27.9039 21.6938Z"
+                  fill="white"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M47.8321 8.40225C46.6959 8.46718 45.6307 8.8324 44.6365 9.49791C44.255 9.7495 44.0643 9.64602 44.0643 9.18747L44.0826 5.12747C44.0907 3.90196 43.4901 3.17559 42.2808 2.94834C42.0739 2.90776 41.8669 2.91385 41.66 2.9666C40.6292 3.21414 40.1119 3.8695 40.1078 4.93269C40.1037 8.72689 40.0855 12.7179 40.053 16.9057C40.0043 23.4675 46.28 27.7466 52.2939 25.4518C53.5153 24.9852 55.0614 23.8023 56.9321 21.9031C59.6145 19.1843 62.4003 16.4472 65.2895 13.6918C70.153 9.05356 77.2565 17.0092 71.2913 21.2396C70.4188 21.8605 69.4936 22.1405 68.5156 22.0796C65.813 21.9092 64.1614 20.2962 63.5608 17.2405C63.559 17.231 63.5544 17.2223 63.5476 17.2153C63.5408 17.2083 63.532 17.2034 63.5222 17.2009C63.5123 17.1984 63.5016 17.1985 63.4913 17.2012C63.481 17.2039 63.4714 17.2091 63.4634 17.2162L60.3287 20.3753C60.2759 20.4281 60.2658 20.4869 60.2982 20.5518C63.6948 27.7283 73.4156 27.9475 76.7574 20.8501C78.3765 17.4049 77.4695 12.9614 74.5661 10.5875C71.3237 7.93762 67.9252 7.53993 64.3704 9.39443C62.6418 10.2994 60.9396 12.0897 59.3733 13.7368C58.9486 14.1835 58.5338 14.6197 58.1313 15.0249C57.9406 15.2196 57.8026 15.1872 57.7174 14.9275C56.1713 10.2852 52.8762 8.11008 47.8321 8.40225ZM53.8832 16.9849C53.8868 17.0617 53.8887 17.1389 53.8887 17.2162C53.8887 17.2495 53.8883 17.2828 53.8877 17.316C53.8351 19.9733 51.6646 22.1112 48.9947 22.1112C46.2919 22.1112 44.1008 19.9201 44.1008 17.2173C44.1008 16.2394 44.3876 15.3286 44.8816 14.5642C45.0684 14.2745 45.2867 14.0032 45.5342 13.7556C45.8799 13.41 46.2719 13.1214 46.6957 12.8959C47.0657 12.6986 47.464 12.5475 47.883 12.4502C48.2446 12.3658 48.6174 12.3223 48.9948 12.3223C49.3788 12.3223 49.7582 12.3674 50.1258 12.4547C50.5195 12.5479 50.8947 12.6886 51.2452 12.8704C51.6876 13.0995 52.0964 13.3968 52.4553 13.7556C52.7173 14.0176 52.9465 14.3063 53.1403 14.6152C53.5758 15.3075 53.8426 16.1166 53.8832 16.9849Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-box">
+              <div class="b-text">SECURED IN</div>
+              <div class="b-text">COLLABORATION WITH</div>
+            </div>
+          </div>
+      </div>
+       <div class="btn">Stake Now</div>
+        </div>
+        
+      </div>
+     
+     
+    </div>
+    <div class="row4">
+      <div class="title">SECURE MONEY MARKET</div>
+      <div class="s-t">
+        <span>LIVE NOW!</span>
+        <span>Launch App</span>
+      </div>
+      <div class="high">High-Level Security</div>
+      <div class="content">
+        Kinza Finance prioritizes security with innovative security features.
+        Asset Isolation insulates volatile assets from stable assets to avoid
+        contagion. Protected Collateral allows users to protect their capital
+        from borrowers.
+      </div>
+      <div class="high">Next Gen Capital Efficiency: LRTs</div>
+      <div class="content">
+        Liquid Restaking Tokens (LRTs) free up Ethereum and POS chain staker'
+        capital. Kinza Finance continues to expand and support the widest
+        selection of LRTs with deep liquidity and boosted yield.
+      </div>
+      <div class="high">Real Yield</div>
+      <div class="content">
+        We align token emissions with fees generated using a unique veTokenomics
+        model called ve-Real-Yield. Users can stake the native Kinza token KZA
+        to direct future token emissions, and collect fees and bribes.
+      </div>
+    </div>
+    <div class="row5">
+      <div class="title">BTC LRT</div>
+      <div class="s-t">
+        <span>LIVE NOW!</span>
+        <span>Launch App</span>
+      </div>
+      <div class="high">Unlocking Trillions</div>
+      <div class="content">
+        Bitcoin staking taps 21 Million Bitcoin, unlocking trillions of capital
+        to secure Proof of Stake chains, and stimulating yield for BTC hodlers.
+        Kinza native BTC LRT kBTC, powered by Babylon, frees up BTC staker
+        capital and serves as a frictionless portal into the DeFi lanscape for
+        BTC stakers supported by Kinza Finance liquidity.
+      </div>
+      <div class="high">HODL 2.0</div>
+      <div class="content">
+        With Kinza Bitcoin staking, experience next level capital efficiency to
+        elevate your HODL, freeing up your capital to lend, borrow, and invest.
+        Simply connect your bitcoin and EVM wallet, stake BTC, and recieve kBTC
+        1:1 on your preffered network. Unstake at your convenience back to BTC.
+      </div>
+      <div class="learn"><a>Learn more</a></div>
+    </div>
+    <div class="row6">
+      <div class="title">MODULAR <br/> PERMISSION LENDING</div>
+      <div class="content">
+        Kinza Finance is working on a new generation of lending platform that's
+        modular and permissionless. It allows users to curate particular lending
+        maps by designating which assets can be used as collateral against
+        deposit, or simply join an existing pool maintained by experienced
+        curators. Kinza ModuLend brings transparent and automated risk
+        management for the most flexible DeFi strategies.
+      </div>
+    </div>
+    <div class="footer flex">
+      <div class="logo ">
+        <svg width="132" height="36" viewBox="0 0 132 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="LOGO" clip-path="url(#clip0_9520_2803)"><g id="ç¼ç»"><path id="ç©å½¢" d="M14.3784 15.5859H10.8989V22.8435H14.3784V15.5859Z" fill="#CEA979"></path><path id="ç©å½¢_2" d="M24.8169 15.5859H21.3374V22.8435H24.8169V15.5859Z" fill="#CEA979"></path><path id="æ¤&shy;åå½¢" d="M17.8576 33.1267C25.8645 33.1267 32.3553 26.3573 32.3553 18.0067C32.3553 9.65617 25.8645 2.88672 17.8576 2.88672C9.85072 2.88672 3.35986 9.65617 3.35986 18.0067C3.35986 26.3573 9.85072 33.1267 17.8576 33.1267Z" stroke="#CEA979" stroke-width="3.4992"></path><path id="è·¯å¾" d="M28.6817 17.4964C24.6185 16.468 20.9291 14.5055 17.8568 11.8516C14.7844 14.5055 11.0949 16.468 7.03174 17.4964" stroke="#CEA979" stroke-width="3.4992"></path><path id="è·¯å¾_2" d="M31.3896 25.9291C26.2224 24.9818 21.5778 22.9399 17.8583 20.125C14.139 22.9399 9.49442 24.9818 4.32715 25.9291" stroke="#CEA979" stroke-width="3.4992"></path></g><path id="è·¯å¾_3" d="M48.0127 30.1022V5.91016H53.045V15.796L56.8685 5.91016H61.7884L57.5713 16.8413L61.9853 30.1022H56.8685L53.5792 19.4099L53.045 20.3656V30.1022H48.0127Z" fill="#CEA979"></path><path id="è·¯å¾_4" d="M68.4902 30.1022V5.91016H73.5226V30.1022H68.4902Z" fill="#CEA979"></path><path id="è·¯å¾_5" d="M81.4165 30.1022V5.91016H84.9588L89.6257 17.5581V5.91016H93.7866V30.1022H90.3848L85.7179 17.5581V30.1022H81.4165Z" fill="#CEA979"></path><path id="è·¯å¾_6" d="M100.803 30.1022V26.8765L106.369 9.52403H101.056V5.91016H111.317V8.92669L105.666 26.4882H111.374V30.1022H100.803Z" fill="#CEA979"></path><path id="å½¢ç¶" d="M117.238 30.1022L121.54 5.91016H127.275L131.52 30.1022H126.881L126.122 24.995H122.776L121.99 30.1022H117.238ZM123.226 21.7992H125.644L124.436 12.3614L123.226 21.7992Z" fill="#CEA979"></path></g><defs><clipPath id="clip0_9520_2803"><rect width="131.04" height="36" fill="white" transform="translate(0.47998)"></rect></clipPath></defs></svg>
+        
+      </div>
+      <div class="text">
+        <div>2025 KINZA Foundation. All Rights Reserved</div>
+        <div>Disclaimer &nbsp;&nbsp;&nbsp;Contact</div>
+      </div>
+      <div class="flex img-box">
+        <div class="app"><span>App</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Docs</span></div>
+        <div>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.335 24C19.7653 24 23.8282 17.8429 23.8282 12.5068C23.8282 12.3309 23.8281 12.155 23.8198 11.9874C24.6072 11.4178 25.2941 10.7058 25.8386 9.89319C25.1182 10.2115 24.3391 10.4293 23.5182 10.5298C24.3559 10.0272 24.9925 9.23979 25.2941 8.29319C24.5151 8.75393 23.6522 9.089 22.7308 9.2733C21.9936 8.48586 20.9465 8 19.7821 8C17.5538 8 15.7444 9.80942 15.7444 12.0377C15.7444 12.356 15.7779 12.666 15.8533 12.9592C12.4941 12.7916 9.5203 11.1832 7.52658 8.73717C7.18312 9.33194 6.98208 10.0272 6.98208 10.7644C6.98208 12.1634 7.69412 13.4031 8.78312 14.1236C8.12134 14.1068 7.50145 13.9225 6.95694 13.6209C6.95694 13.6377 6.95694 13.6544 6.95694 13.6712C6.95694 15.6314 8.34752 17.2565 10.1988 17.6335C9.86375 17.7257 9.50354 17.7759 9.13496 17.7759C8.87527 17.7759 8.62396 17.7508 8.37265 17.7005C8.88365 19.3089 10.3747 20.4733 12.1423 20.5068C10.7601 21.5874 9.01768 22.2325 7.12448 22.2325C6.79778 22.2325 6.47946 22.2157 6.16113 22.1738C7.92867 23.3298 10.0564 24 12.335 24Z" fill="#c9a151"></path></svg>
+        </div>
+        <div>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 10C24 10 21.7075 8.206 19 8L18.756 8.488C21.204 9.087 22.327 9.9455 23.5 11C21.4775 9.9675 19.4805 9 16 9C12.5195 9 10.5225 9.9675 8.5 11C9.673 9.9455 11.009 8.9925 13.244 8.488L13 8C10.1595 8.2685 8 10 8 10C8 10 5.4395 13.7125 5 21C7.581 23.9765 11.5 24 11.5 24L12.3195 22.9075C10.9285 22.424 9.3575 21.5605 8 20C9.619 21.225 12.0625 22.5 16 22.5C19.9375 22.5 22.381 21.225 24 20C22.6425 21.5605 21.0715 22.424 19.6805 22.9075L20.5 24C20.5 24 24.419 23.9765 27 21C26.5605 13.7125 24 10 24 10ZM12.75 19C11.7835 19 11 18.1045 11 17C11 15.8955 11.7835 15 12.75 15C13.7165 15 14.5 15.8955 14.5 17C14.5 18.1045 13.7165 19 12.75 19ZM19.25 19C18.2835 19 17.5 18.1045 17.5 17C17.5 15.8955 18.2835 15 19.25 15C20.2165 15 21 15.8955 21 17C21 18.1045 20.2165 19 19.25 19Z" fill="#c9a151"></path></svg>
+        </div>
+        <div>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.67391 14.8879C12.8565 12.6299 16.3124 11.1413 18.0415 10.4221C22.9786 8.36862 24.0045 8.0119 24.6731 8.00013C24.8202 7.99753 25.149 8.03398 25.362 8.20682C25.5419 8.35275 25.5914 8.5499 25.615 8.68826C25.6387 8.82663 25.6682 9.14183 25.6448 9.38811C25.3772 12.1992 24.2196 19.021 23.6306 22.1694C23.3814 23.5017 22.8907 23.9484 22.4157 23.9921C21.3833 24.0871 20.5993 23.3098 19.5994 22.6543C18.0347 21.6287 17.1508 20.9902 15.632 19.9893C13.8768 18.8327 15.0146 18.1969 16.0149 17.158C16.2767 16.8861 20.8254 12.7487 20.9135 12.3733C20.9245 12.3264 20.9347 12.1514 20.8308 12.059C20.7268 11.9666 20.5734 11.9982 20.4627 12.0234C20.3057 12.059 17.8062 13.7111 12.9639 16.9798C12.2544 17.467 11.6118 17.7044 11.036 17.6919C10.4012 17.6782 9.1802 17.333 8.2725 17.038C7.15916 16.6761 6.27431 16.4847 6.35136 15.8701C6.39149 15.55 6.83234 15.2226 7.67391 14.8879Z" fill="#c9a151"></path></svg>
+        </div>
+        <div>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.8526 16C17.8526 20.4183 14.2781 24 9.86867 24C5.45928 24 1.88477 20.4183 1.88477 16C1.88477 11.5817 5.45928 8 9.86867 8C14.2781 8 17.8526 11.5817 17.8526 16ZM26.486 15.9525C26.486 20.1009 24.7095 23.4639 22.5182 23.4639C20.3268 23.4639 18.5504 20.1009 18.5504 15.9525C18.5504 11.8041 20.3268 8.44111 22.5182 8.44111C24.7095 8.44111 26.486 11.8041 26.486 15.9525ZM28.6654 22.6973C29.466 22.6973 30.1151 19.6541 30.1151 15.9001C30.1151 12.146 29.466 9.10277 28.6654 9.10277C27.8648 9.10277 27.2157 12.146 27.2157 15.9001C27.2157 19.6541 27.8648 22.6973 28.6654 22.6973Z" fill="#c9a151"></path></svg>
+        </div>
+        <div>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.924 13.5706C22.924 12.4048 22.5292 11.4378 21.8552 10.6798C21.9284 10.5158 22.0046 10.2958 22.0425 10.0192C22.1294 9.3884 22.0269 9.0099 21.94 8.63947C21.8532 8.26905 21.7507 8.00864 21.7507 8.00864C21.7507 8.00864 21.2852 7.9612 20.8909 8.09544C20.4966 8.22968 20.1573 8.33213 19.6681 8.62383C19.4394 8.76009 19.2092 8.90947 19.0269 9.03059C18.2479 8.81459 17.3911 8.70356 16.4899 8.70356C15.5806 8.70356 14.7163 8.8151 13.9317 9.03261C13.749 8.91098 13.5172 8.76059 13.287 8.62332C12.7978 8.33163 12.4585 8.22918 12.0642 8.09494C11.6699 7.9607 11.2044 8.00813 11.2044 8.00813C11.2044 8.00813 11.1019 8.26854 11.0151 8.63897C10.9282 9.00939 10.8257 9.38789 10.9126 10.0187C10.9515 10.3023 11.0302 10.5264 11.1054 10.6914C10.4441 11.4449 10.0563 12.4058 10.0563 13.5701C10.0563 16.5895 11.6881 17.9677 14.6613 18.3316C14.3144 18.698 14.0817 19.1673 14.0034 19.6896C13.808 19.7754 13.5829 19.8562 13.3663 19.8885C12.8089 19.9728 12.2197 19.8885 11.936 19.7204C11.6522 19.5524 11.3155 19.1739 11.063 18.8055C10.85 18.4946 10.5425 18.1338 10.2638 18.0066C9.89577 17.8385 9.53781 17.7754 9.33838 17.8067C9.13845 17.8385 9.04404 17.9854 9.08595 18.0909C9.12785 18.1958 9.32778 18.3538 9.53831 18.4694C9.74885 18.5849 10.075 18.9003 10.2643 19.2052C10.4754 19.5453 10.5168 19.7416 10.6955 20.1302C10.8212 20.4037 11.2513 20.7454 11.5578 20.9291C11.8208 21.0871 12.3464 21.1769 12.9149 21.2026C13.1113 21.2117 13.5753 21.1542 13.9666 21.0987V22.9912C13.9666 23.3137 13.6712 23.5589 13.3653 23.5024C14.3472 23.8324 15.3959 24 16.4899 24C17.5835 24 18.6321 23.8324 19.6151 23.5034C19.3096 23.5594 19.0143 23.3142 19.0143 22.9917V20.0626C19.0143 19.3919 18.7482 18.7858 18.3211 18.3341C21.2726 17.9798 22.924 16.6344 22.924 13.5706ZM10.0472 18.3109C9.96948 18.271 9.92757 18.1973 9.95383 18.1454C9.98008 18.0934 10.0649 18.0838 10.1426 18.1237C10.2204 18.1635 10.2623 18.2372 10.236 18.2892C10.2098 18.3412 10.125 18.3508 10.0472 18.3109ZM10.6591 18.6919C10.6182 18.7363 10.5304 18.7222 10.4627 18.6606C10.3951 18.5991 10.3734 18.5128 10.4143 18.4684C10.4552 18.4239 10.543 18.4381 10.6107 18.4996C10.6783 18.5612 10.7 18.6475 10.6591 18.6919ZM11.0398 19.3228C10.9883 19.3591 10.901 19.3253 10.8449 19.2471C10.7889 19.1688 10.7854 19.0755 10.8368 19.0391C10.8883 19.0028 10.9757 19.0366 11.0317 19.1148C11.0873 19.1931 11.0913 19.2864 11.0398 19.3228ZM11.5866 19.7976C11.5517 19.8542 11.4528 19.8567 11.366 19.8037C11.2791 19.7507 11.2367 19.6619 11.2715 19.6054C11.3064 19.5488 11.4053 19.5463 11.4922 19.5993C11.579 19.6523 11.6214 19.7411 11.5866 19.7976ZM12.1036 20.2624C11.996 20.2493 11.9163 20.1822 11.9254 20.1126C11.9339 20.0429 12.0283 19.9975 12.1354 20.0106C12.2429 20.0237 12.3227 20.0909 12.3136 20.1605C12.305 20.2296 12.2111 20.2756 12.1036 20.2624ZM12.9371 20.3831C12.8225 20.3765 12.7332 20.3109 12.7377 20.2372C12.7422 20.1635 12.8387 20.1085 12.9533 20.1151C13.0679 20.1216 13.1572 20.1872 13.1527 20.2609C13.1482 20.3351 13.0517 20.3896 12.9371 20.3831ZM13.7237 20.3043C13.6015 20.3043 13.5026 20.2407 13.5026 20.1625C13.5026 20.0843 13.6015 20.0207 13.7237 20.0207C13.8459 20.0207 13.9448 20.0843 13.9448 20.1625C13.9448 20.2407 13.8454 20.3043 13.7237 20.3043Z" fill="#c9a151"></path></svg>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import {
+  ref,
+  computed,
+  defineAsyncComponent,
+  onMounted,
+  onUnmounted,
+} from "vue";
+// import AdScroller from '@/components/AdScroller.vue'
+
+const AdScroller = defineAsyncComponent(() =>
+  import("@/components/AdScroller.vue")
+);
+
+const adList = ref([
+]);
+for (let i = 1; i <= 21; i++) {
+  adList.value.push({
+    id: i,
+    icon: new URL("../../assets/svg/s4/m" + i + ".svg", import.meta.url).href,
+  });
+}
+
+const parenters = ref([]);
+for (let i = 1; i <= 21; i++) {
+  parenters.value.push({
+    id: i,
+    icon: new URL("../../assets/svg/s4/p" + i + ".svg", import.meta.url).href,
+  });
+}
 </script>
 
 <style scoped>
 .kinza-page {
+  widht: 100%;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+.header {
+  width: 100%;
+  height: 82px;
+  padding: 0 3%;
+  position: fixed;
+  justify-content: space-between;
+  .home{
+    display:none;
+  }
+  .left {
+    img {
+      margin-right: 20px;
+    }
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+    }
+    .value1{display:none}
+  }
+  .middle {
+    .tab {
+      margin-left: 12%;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+  .right {
+    .icon {
+      margin-right: 20px;
+    }
+    .app {
+      /* width:83px; */
+      /* height: 40px; */
+      padding: 10px 30px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #212529;
+      font-size: 16px;
+      font-weight: 600;
+      color: #e2e2e2;
+    }
+  }
+}
+.fan {
+  transform: rotate(180deg);
+}
+.row1 {
+  width: 100%;
+  min-height: 1000px;
+  background-color: #f8f8f8;
+  padding-top: 82px;
+  display: flex;
+  background-repeat: no-repeat, repeat, repeat;
+  background-size: 100% 21rem, auto, auto;
+  background-image: url("@/assets/images/img4/bg1.png"),
+    url("@/assets/images/img4/bg2.png"),
+    linear-gradient(90deg, #e2e2e2 14.61%, #e5e5e5 66.39%);
+  .content {
+    width: 100%;
+  }
+  .title-box {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+      color: #212529;
+    }
+    span {
+      color: #ffffff;
+    }
+    .btn {
+      width: 250px;
+      height: 70px;
+      /* border-radius: 10px; */
+      background-color: #212529;
+      color: #e2e2e2;
+      text-align: center;
+      line-height: 70px;
+      font-size: 25px;
+      font-weight: 600;
+      margin-left: 30px;
+    }
+  }
+  .text-img {
+    width: 100%;
+    margin-top: 200px;
+    text-align: center;
+    img {
+      width: 45%;
+      height: auto;
+    }
+  }
+  .sub-t {
+    width: 50%;
+    text-align: center;
+    color: #635736;
+    font-size: 2rem;
+    margin: 0 auto;
+    /* max-width: 560px; */
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 4.2px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+  .tab-btn {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    .tab {
+      margin: 10px 10px;
+      background: #b8b09e;
+      color: #fff;
+      font-size: 20px;
+      padding: 5px 10px;
+    }
+  }
+  .total {
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    .line {
+      width: 90%;
+      height: 1px;
+      background-color: #635736;
+    }
+    .left {
+      width: 30%;
+      .text-box {
+        justify-content: center;
+      }
+      .line {
+        margin: 20px 0;
+        width: 80%;
+        margin-left: 10%;
+      }
+      .text {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 20px;
+      }
+      .value {
+        font-size: 40px;
+        font-weight: 600;
+        color: #212529;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+    .live {
+      width: 60%;
+      margin-top: -52px;
+      .line {
+        margin: 20px 0;
+        width: 70%;
+      }
+      .line-icon {
+        margin: 0 20px;
+      }
+      .text {
+        width: 150px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .icon-list {
+        margin-top: 30px;
+        justify-content: center;
+        .icon {
+          margin-right: 2%;
+        }
+      }
+    }
+  }
+  .fea{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 3%;
+    .title{
+      margin-right: 20px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .scroll{
+      width: 85%;
+      overflow: hidden;
+      white-space: nowrap;
+
+      img {
+        width: 100px;
+        height: auto;
+        margin-right: 40px;
+      }
+    }
+  }
+}
+.row2{
+  background-image: url("@/assets/images/img4/bg2.png"), linear-gradient(#eabd3d, #eabd3d);
   justify-content: center;
-  height: 100vh;
+  padding:0 3%;
+  min-height: 1000px;
+  align-items: start;
+  padding-top:120px;
+  .leading-left{
+    width:50%;
+    text-align: center;
+    padding:0 20px;
+  }
+  .leading-right{
+    width:50%;
+    text-align: center;
+    padding:0 20px;
+  }
+  .img-list{
+    margin-top:40px;
+    width:100%;
+    flex-flow: wrap;
+    justify-content: center;
+    .img-box{
+      margin-right: 1%;
+      /* min-width: 120px; */
+      width:24%;
+      /* height:60px; */
+      margin-bottom: 20px;
+      img{
+        width:100%;
+        /* height:60px; */
+      }
+    }
+  }
+  .title{
+    font-size: 30px;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 18px;
+  }
+  .sub-t{
+    font-size: 20px;
+  }
+  .last-img{
+    /* width:200px; */
+    img{
+      /* width:200px; */
+    }
+  }
+  .title-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    .line {
+      width: 40%;
+      height: 1px;
+      background-color: #635736;
+    }
+    .text-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 20px;
+      .icon {
+        /* margin-right: 10px; */
+      }
+      .text {
+        margin:0 10px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #212529;
+      }
+    }
+
+  }
+  .partner-list{
+    margin:80px 3%;
+    justify-content: center;
+    flex-wrap: wrap;
+    .partner-item{
+      margin:1%
+    }
+  }
+}
+.row3{
+  padding-top: 60px;
+  min-height: 550px;
+  background: linear-gradient(205deg, #030303, #2d2518 75%, #62542f);
+  /* background-image: url("@/assets/images/img4/btb.png"); */
+  position: relative;
+  .bg{
+    position: absolute;
+    width:540px;
+    height: 540px;
+    right:0;
+    top:0px;
+  }
+  .btc{
+    align-items: flex-start;
+  }
+  .btc-l{
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid #eabd3d;
+    
+    .title{
+      font-size: 60px;
+      font-weight: 700;
+      color: #eabd3d;
+    }
+  }
+  .btc-r{
+    width: 70%;
+    padding-left: 5%;
+    img{
+      width: 162px;
+    }
+    .text{
+       font-size: 60px;
+        font-weight: 700;
+        color: #eabd3d;
+        margin:0 20px;
+        span{
+          font-weight: 200;
+        }
+    }
+    .sub-t{
+      font-size: 30px;
+       font-weight: 200;
+      color: #ffffff;
+      text-align: center;
+      padding-right: 20%;
+    }
+  }
+  .babylon{
+    margin-top:3%;
+    .babylon-l{
+      img{
+        width: 130px;
+      }
+    }
+    .babylon-r{
+      margin-left: 20px;
+    }
+    .b-text{
+      font-size: 20px;
+      font-weight: 300;
+      color: #AEA078;
+      /* text-align: center; */
+      margin: 0 20px;
+    }
+  }
+  .btn{
+    width: 200px;
+    height: 60px;
+    /* border-radius: 10px; */
+    background-color: #eabd3d;
+    color: #212529;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+}
+.row4{
+  min-height: 120vh;
+  padding:20px 0 0 10% ;
+  background-image: url("@/assets/images/img4/bg-black1.png"),linear-gradient(#000, #000);
+  background-size:cover;
+  .s-t{
+    color:#c9a151;
+    font-size: 30px;
+    font-weight: 500;
+    margin:15px 0;
+    span:nth-child(1){
+      font-style: italic;
+    }
+    span:nth-child(2){
+      color:#030303;
+      background: #c9a151;
+      border-radius:5px;
+      padding:10px 15px;
+      margin-left:20px;
+      font-size: 24px;
+    }
+  } 
+  .title{
+    font-size: 60px;
+    font-weight: 600;
+    color:#c9a151;
+  }
+  .high{
+    color:#ffffff;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .content{
+    color:#c9a151;
+    font-size: 23px;
+    font-weight: 500;
+    width: 50%;
+    margin-bottom:20px;
+  }
+}
+.row5{
+  padding:40px 0 0 10% ;
+  min-height: 100vh;
+  background-size:cover;
+  background-image: url("@/assets/images/img4/bg-black2.png"),linear-gradient(#000, #000);
+  .title{
+    font-size: 50px;
+    font-weight: 600;
+    color:#c9a151;
+    margin-bottom:40px;
+  }
+  .s-t{
+    color:#c9a151;
+    font-size: 30px;
+    font-weight: 500;
+    margin:15px 0;
+    span:nth-child(1){
+      font-style: italic;
+    }
+    span:nth-child(2){
+      color:#030303;
+      background: #c9a151;
+      border-radius:5px;
+      padding:10px 15px;
+      margin-left:20px;
+      font-size: 24px;
+    }
+  } 
+   .high{
+    color:#ffffff;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .content{
+    color:#c9a151;
+    font-size: 23px;
+    font-weight: 500;
+    width: 50%;
+    margin-bottom:20px;
+  }
+  .learn{
+    font-size: 25px;
+    color:#c9a151;
+    text-decoration: underline;
+  }
+}
+.row6{
+  padding:20px 0 0 10% ;
+  min-height: 100vh;
+  background-size:cover;
+  background-image: url("@/assets/images/img4/bg-black3.png"),linear-gradient(#000, #000);
+  .title{
+    font-size: 50px;
+    font-weight: 600;
+    color:#c9a151;
+    margin-bottom:40px;
+  }
+   .high{
+    color:#c9a151;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .content{
+    color:#c9a151;
+    font-size: 23px;
+    font-weight: 500;
+    width: 50%;
+    margin-bottom:20px;
+  }
+}
+.footer{
+  width:100%;
+  padding:0 10%;
+  background: #030303;
+  justify-content: left;
+  align-items: center;
+  .logo{
+    width:15%;
+    
+  }
+  .text{
+    width:30%;
+    padding-left: 20px;
+    color:#c9a151
+  }
+  .app{
+    padding-left: 20px;
+    color:#c9a151;
+    font-weight:600;
+  }
+  .img-box{
+    width:65%;
+    text-align:right;
+    align-items: center;
+    justify-content: right;
+    div{
+      margin-left: 20px;
+    }
+  }
+}
+@media (max-width: 560px) {
+
+}
+@media (max-width: 768px) {
+  .header{
+    .icon{
+      display:none !important;
+    }
+    .app{display:none !important;}
+    .home{ display:inline-block !important;}
+  }
+}
+@media (max-width: 960px) {
+  .header{
+    .middle{
+      display:none !important;
+    }
+   
+  }
+}
+@media (max-width: 1024px) {
+  .row1{
+    .content{
+      .title-box{
+        display:inline-block;
+        text-align: center;
+        .btn{
+          margin:0 auto;
+          margin-top:10px;
+          height:50px;
+          width:200px;
+          line-height:50px;
+          font-size:20px;
+        }
+      }
+    }
+    .text-img{
+      margin-top:100px;
+    }
+    .sub-t{
+      font-size:18px;
+    }
+    .total{
+      display:inline-block !important;
+      .left{
+        
+        width:100%;
+        .text-box{
+          display:flex !important;
+        }
+      }
+      .live{
+        width:100%;
+      }
+    }
+   
+  }
 }
 </style>
