@@ -1,6 +1,6 @@
 <script setup>
+   import { ref, onMounted, onUnmounted } from 'vue'
 
-  import { ref, onMounted, onUnmounted } from 'vue'
   // 屏幕尺寸响应式对象
   const screen = ref({
     width: window.innerWidth,
@@ -44,22 +44,22 @@
   { name: '', icon: new URL('../../assets/images/img1/icon1.png', import.meta.url).href },
   { name: '', icon: new URL('../../assets/images/img1/icon2.png', import.meta.url).href },
   ])
-  const learn = ref([
-  { name: '', icon: new URL('../../assets/images/img1/learn1.svg', import.meta.url).href },
-  { name: '', icon: new URL('../../assets/images/img1/learn2.svg', import.meta.url).href },
-  { name: '', icon: new URL('../../assets/images/img1/learn3.svg', import.meta.url).href },
-  { name: '', icon: new URL('../../assets/images/img1/learn4.svg', import.meta.url).href },
-  { name: '', icon: new URL('../../assets/images/img1/learn5.svg', import.meta.url).href },
-  { name: '', icon: new URL('../../assets/images/img1/learn6.svg', import.meta.url).href },
-  { name: '', icon: new URL('../../assets/images/img1/learn7.svg', import.meta.url).href },
-  { name: '', icon: new URL('../../assets/images/img1/learn8.svg', import.meta.url).href },
-  ])
+  // const learn = ref([
+  // { name: '', icon: new URL('../../assets/images/img1/learn1.svg', import.meta.url).href },
+  // { name: '', icon: new URL('../../assets/images/img1/learn2.svg', import.meta.url).href },
+  // { name: '', icon: new URL('../../assets/images/img1/learn3.svg', import.meta.url).href },
+  // { name: '', icon: new URL('../../assets/images/img1/learn4.svg', import.meta.url).href },
+  // { name: '', icon: new URL('../../assets/images/img1/learn5.svg', import.meta.url).href },
+  // { name: '', icon: new URL('../../assets/images/img1/learn6.svg', import.meta.url).href },
+  // { name: '', icon: new URL('../../assets/images/img1/learn7.svg', import.meta.url).href },
+  // { name: '', icon: new URL('../../assets/images/img1/learn8.svg', import.meta.url).href },
+  // ])
   const imageBoxs = ref([
     { name: 'LOW-fee Bitcoin DeFi',
       subname:'Low-fee Bitcoin DeFi',
       desc:'Deep access to Bitcoin allows for newer and more powerful applications.',
       icon: new URL('../../assets/images/img1/low-fee-bitcoin-defi.png', import.meta.url).href ,
-      subicon: new URL('../../assets/images/img1/01.svg', import.meta.url).href
+      // subicon: new URL('../../assets/images/img1/01.svg', import.meta.url).href
     },
     { name: 'LOW-fee Bitcoin DeFi',
       subname:'Low-fee Bitcoin DeFi',
@@ -248,7 +248,7 @@ const icon01Url = new URL('../../assets/svg/s1/icon01.svg', import.meta.url).hre
                 </div>
                 <div style="text-align: center;margin-top: 40px;color: #fff;font-size: 25px;">hVM enables:</div>
                 <div class="hvm-box">
-                  <div class="item" :class="[index < 3?'no-after':'']" v-for="(item,index) in imageBoxs">
+                  <div class="item" :class="[index < 3?'no-after':'']" :key="index" v-for="(item,index) in imageBoxs">
                     <div class="trans">
                       <div class="line"></div>
                       <div class="hvm-icon" >
