@@ -640,6 +640,23 @@ for (let i = 1; i <= 21; i++) {
     icon: new URL("../../assets/svg/s4/p" + i + ".svg", import.meta.url).href,
   });
 }
+const handleWindowScroll = () => {
+  // debugger
+  console.log('窗口滚动位置:', window.scrollY)
+  const element = document.querySelector('.header')
+  if (window.scrollY > 276) {
+    element.style.backgroundColor = '#ffffff'
+  } else {
+    element.style.backgroundColor = 'transparent'
+  }
+}
+onMounted(() => {
+  window.addEventListener('scroll', handleWindowScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleWindowScroll)
+})
 </script>
 
 <style scoped>

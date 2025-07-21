@@ -1,11 +1,11 @@
 <template>
   <div class="ai-page">
-    <!-- <object
+    <object
       data="./src/components/html/ai.html"
       ref="webPage"
       type="text/html"
       style="width: 100%; height: 99%;"
-    ></object> -->
+    ></object>
   </div>
 </template>
 

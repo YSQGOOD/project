@@ -1,13 +1,11 @@
 <template>
   <div class="arcium-page">
-          <!-- ...主内容... -->
-    <!-- <iframe width="100%" height="100%" src="./test.html"></iframe> -->
-    <!-- <object
+    <object
       data="./src/components/html/arcium.html"
       ref="webPage"
       type="text/html"
       style="width: 100%; height: 99%;"
-    ></object> -->
+    ></object>
   </div>
 </template>
 
