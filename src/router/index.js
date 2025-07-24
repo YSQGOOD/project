@@ -6,6 +6,7 @@ import Astraprotocol from '../views/astraprotocol/index.vue'
 import Grafilab from '../views/grafilab/index.vue'
 import Kerneldao from '../views/kerneldao/index.vue'
 import Kinza from '../views/kinza/index.vue'
+import Ateru from '../views/ateru/index.vue'
 const routes = [
   { path: '/', name: 'Hemi', component: Hemi },
   { path: '/ai', name: 'Ai', component: Ai },
@@ -14,6 +15,8 @@ const routes = [
   { path: '/grafilab', name: 'Grafilab', component: Grafilab },
   { path: '/kerneldao', name: 'Kerneldao', component: Kerneldao },
   { path: '/kinza', name: 'Kinza', component: Kinza },
+  { path: '/ateru', name: 'Ateru', component: Ateru },
+  
 ]
 
 const router = createRouter({

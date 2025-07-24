@@ -1,0 +1,73 @@
+
+
+//フローティングバナー
+(function($) {
+    $(function () {
+        var display = function () {
+            var windowHeight = $(window).height();
+            var documentHeight = $(document).height();
+            var scrollBottomThreshold = documentHeight - windowHeight - 3000; // ボタンが下から消える位置
+            
+            if ($(this).scrollTop() > 600 && $(window).scrollTop() < scrollBottomThreshold) {
+                $(".fixed_banner").fadeIn();
+            } else {
+                $(".fixed_banner").fadeOut();
+            }
+        };// ボタンが上から消える位置
+        $(window).on("scroll", display);
+    });
+})(jQuery);
+
+
+function popupImage() {
+    var popups = document.getElementById('js-popup');
+    popups.classList.toggle('is-show');
+
+    document.getElementById('js-close-area').onclick = function() {
+        popups.classList.remove('is-show');
+    };
+
+    document.getElementById('js-black-bg').onclick = function() {
+        popups.classList.remove('is-show');
+    };
+
+    var popupLinks = document.querySelectorAll('.popup-inner a');
+    popupLinks.forEach(function(link) {
+        link.onclick = function() {
+            popups.classList.remove('is-show');
+        };
+    });
+}
+
+window.onload = function() {
+    history.pushState(null, null, null);
+
+    window.addEventListener("popstate", function () {
+        var ignoredHashes = ['#btn02', '#btn03', '#btn04', '#btn05'];
+
+        // 現在のハッシュが無視リストにあるか確認
+        if (!ignoredHashes.includes(location.hash)) {
+            history.pushState(null, null, null);
+            // ポップアップを表示
+            popupImage();
+        }
+    });
+};
+
+
+// フォーム
+document.addEventListener('DOMContentLoaded', function() {
+    var emailInputs = document.querySelectorAll('.email-input');
+    
+    emailInputs.forEach(function(input) {
+        input.addEventListener('focus', function() {
+            this.placeholder = '';
+        });
+
+        input.addEventListener('blur', function() {
+            if (this.value === '') {
+                this.placeholder = 'メールアドレスを入力してください';
+            }
+        });
+    });
+});
