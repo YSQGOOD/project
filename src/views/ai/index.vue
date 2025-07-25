@@ -1,7 +1,7 @@
 <template>
   <div class="ai-page">
     <object
-      data="./src/components/html/ai.html"
+      :data="htmlPath"
       ref="webPage"
       type="text/html"
       style="width: 100%; height: 99%;"
@@ -10,6 +10,15 @@
 </template>
 
 <script setup>
+import {
+  ref,
+  onMounted,
+} from "vue";
+const htmlPath = ref('');
+
+onMounted(() => {
+  htmlPath.value = `${import.meta.env.BASE_URL}external/html/ai.html`;
+});
 </script>
 
 <style scoped>

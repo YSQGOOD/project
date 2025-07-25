@@ -601,35 +601,35 @@ const adList = ref([]);
 for (let i = 1; i <= 21; i++) {
   adList.value.push({
     id: i,
-    icon: new URL("../../assets/svg/s4/m" + i + ".svg", import.meta.url).href,
+    icon: new URL(`../../assets/svg/s4/m${i}.svg`, import.meta.url).href,
   });
 }
 const adList1 = ref([]);
 for (let i =1; i <= 10; i++) {
   adList1.value.push({
     id: i,
-    icon: new URL("../../assets/svg/s4/m" + i + ".svg", import.meta.url).href,
+    icon: new URL(`../../assets/svg/s4/m${i}.svg`, import.meta.url).href,
   });
 }
 const adList2 = ref([]);
 for (let i = 10; i <= 21; i++) {
   adList2.value.push({
     id: i,
-    icon: new URL("../../assets/svg/s4/m" + i + ".svg", import.meta.url).href,
+    icon: new URL(`../../assets/svg/s4/m${i}.svg`, import.meta.url).href,
   });
 }
 const adList3 = ref([]);
 for (let i = 5; i <= 16; i++) {
   adList3.value.push({
     id: i,
-    icon: new URL("../../assets/svg/s4/m" + i + ".svg", import.meta.url).href,
+    icon: new URL(`../../assets/svg/s4/m${i}.svg`, import.meta.url).href,
   });
 }
 const adList4 = ref([]);
 for (let i = 8; i <= 19; i++) {
   adList4.value.push({
     id: i,
-    icon: new URL("../../assets/svg/s4/m" + i + ".svg", import.meta.url).href,
+    icon: new URL(`../../assets/svg/s4/m${i}.svg`, import.meta.url).href,
   });
 }
 
@@ -637,7 +637,7 @@ const parenters = ref([]);
 for (let i = 1; i <= 21; i++) {
   parenters.value.push({
     id: i,
-    icon: new URL("../../assets/svg/s4/p" + i + ".svg", import.meta.url).href,
+    icon: new URL(`../../assets/svg/s4/p${i}.svg`, import.meta.url).href,
   });
 }
 const handleWindowScroll = () => {

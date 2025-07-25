@@ -217,7 +217,7 @@ for (let i = 1; i <= 9; i++) {
   ads.value.push({
     name:adsName.value[i - 1],
     id: i,
-    icon: new URL("../../assets/svg/s3/e" + i + ".svg", import.meta.url).href,
+    icon: new URL(`../../assets/svg/s3/e${i}.svg`, import.meta.url).href,
   });
 }
 
@@ -226,7 +226,7 @@ const parenters = ref([])
 for (let i = 1; i <= 18; i++) {
   parenters.value.push({
     id: i,
-    icon: new URL("../../assets/svg/s3/p" + i + ".svg", import.meta.url).href,
+    icon: new URL(`../../assets/svg/s3/p${i}.svg`, import.meta.url).href,
   });
 }
 

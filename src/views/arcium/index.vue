@@ -1,7 +1,7 @@
 <template>
   <div class="arcium-page">
     <object
-      data="./src/components/html/arcium.html"
+      :data="htmlPath"
       ref="webPage"
       type="text/html"
       style="width: 100%; height: 99%;"
@@ -13,11 +13,13 @@
 <script setup>
 import {
   ref,
-  computed,
-  defineAsyncComponent,
   onMounted,
-  onUnmounted,
 } from "vue";
+const htmlPath = ref('');
+
+onMounted(() => {
+  htmlPath.value = `${import.meta.env.BASE_URL}external/html/arcium.html`;
+});
 
 
 

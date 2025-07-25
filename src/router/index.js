@@ -1,12 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Hemi from '../views/hemi/index.vue'
-import Ai from '../views/ai/index.vue'
-import Arcium from '../views/arcium/index.vue'
-import Astraprotocol from '../views/astraprotocol/index.vue'
-import Grafilab from '../views/grafilab/index.vue'
-import Kerneldao from '../views/kerneldao/index.vue'
-import Kinza from '../views/kinza/index.vue'
-import Ateru from '../views/ateru/index.vue'
+import { createRouter, createWebHistory,createWebHashHistory } from 'vue-router'
+
+const Hemi = () => import('../views/hemi/index.vue')
+const Ai = () => import('../views/ai/index.vue')
+const Arcium = () => import('../views/arcium/index.vue')
+const Astraprotocol = () => import('../views/astraprotocol/index.vue')
+const Grafilab = () => import('../views/grafilab/index.vue')
+const Kerneldao = () => import('../views/kerneldao/index.vue')
+const Kinza = () => import('../views/kinza/index.vue')
+const Ateru = () => import('../views/ateru/index.vue')
 const routes = [
   { path: '/', name: 'Hemi', component: Hemi },
   { path: '/ai', name: 'Ai', component: Ai },
@@ -20,7 +21,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 

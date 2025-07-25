@@ -27,4 +27,18 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  build: {
+    assetsDir: 'assets', // 静态资源目录
+    // 确保 public 目录被正确复制
+    rollupOptions: {
+      output: {
+        assetFileNames: ({ name }) => {
+          if (/\.(html)$/.test(name ?? '')) {
+            return 'external/[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        }
+      }
+    }
+  }
 })

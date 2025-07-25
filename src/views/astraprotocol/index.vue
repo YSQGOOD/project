@@ -600,7 +600,7 @@ const work = ref([
 
     const circleItems = ref([]);
     for (let i = 1; i <= 36; i++) {
-        circleItems.value.push({index:i,icon:new URL('../../assets/svg/s2/y'+i+'.svg', import.meta.url).href});
+        circleItems.value.push({index:i,icon:new URL(`../../assets/svg/s2/y${i}.svg`, import.meta.url).href});
     }
 
     const radius = ref(1000); 
