@@ -761,7 +761,7 @@ onUnmounted(() => {
       width:100% !important;
       margin-top:20px;
       margin-left: 0;
-      margin-rignt:0;
+      margin-right:0;
       height:200px;
 
     }
