@@ -7,7 +7,7 @@
 <script src="./ateruFile/jquery.min.js.下载"></script> 
 <script type="text/javascript" src="./ateruFile/java.js.下载">window.location.hash = "アンカー名"</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- <link rel="icon" href="https://ateru.co.jp/Landing_06/img/favicon.png"> -->
+<link rel="icon" href="./ateruFile/favicon.png">
 </head>
 <body>
  
@@ -61,11 +61,15 @@
 	  <img src="./ateruFile/pc_cta_01.png" alt="" class="form_img pc yureru-j">
 	  <img src="./ateruFile/sp_cta_01.png" alt="" class="form_img sp fvposition yureru-j"></center>
     <div class="form_box">
-      <form name="mail_form2" method="post" accept-charset="utf-8">
+      <form >
         <div class="align">
 			<input type="hidden" name="mail_add" value="on">
         <input type="text" name="mail" class="form_input_input deco2 mailform " placeholder="メールアドレスを入力してください" onfocus="this.placeholder=&#39;&#39;" onblur="this.placeholder=&#39;メールアドレスを入力してください&#39;" required="required">
-        <button type="submit" name="submit" value="1" class="btn-submit"> <img src="./ateruFile/pc_btn_01.png" alt="" class="shiny-btn pc" disabled=""> <img src="./ateruFile/sp_btn_01.png" alt="" class="shiny-btn sp" disabled=""> </button>
+        
+        <button class="btn-submit" onclick="goGoogle()"> 
+            <img src="./ateruFile/pc_btn_01.png" alt="" class="shiny-btn pc" disabled=""> 
+            <img src="./ateruFile/sp_btn_01.png" alt="" class="shiny-btn sp" disabled=""> 
+        </button>
 		</div><br>
 		<div class="line">
         <p class="check">
@@ -82,7 +86,7 @@
 	</div>
 	
 <a name="btn03"></a>
-<div class="page1">
+<div class="page1" id="section2">
   <div class="inner">
     <div class="midashi">弊社が厳選した銘柄で利益を獲得したくありませんか？</div>
     <div class="midashi_bottom"></div>
@@ -191,7 +195,7 @@
 
       
       
-		<div class="center sa sa--up show"> <a> <img src="./ateruFile/pc_btn_07.png" alt="" class="btn pc" disabled=""> <img src="./ateruFile/sp_btn_07.png" alt="" class="btn sp" disabled=""> </a>
+		<div class="center sa sa--up show" onclick="goDetail()"> <a> <img src="./ateruFile/pc_btn_07.png" alt="" class="btn pc" disabled=""> <img src="./ateruFile/sp_btn_07.png" alt="" class="btn sp" disabled=""> </a>
 		</div>
 	<div class="comment_annotation" style="color: #ffffff;">※上記掲載の提供銘柄事例は、実績の一部を抜粋しております。全ての銘柄が上昇する訳ではございません。</div>
     </div>
@@ -199,7 +203,7 @@
   </div>
 </div>
 
-<div class="page2">
+<!-- <div class="page2">
   <div class="inner">
     <div class="midashi">時代は貯蓄から投資へ！<br>
       でも投資には不安がいっぱい…</div>
@@ -217,7 +221,7 @@
 アテル投資顧問は株式投資の専門集団として、不安の少ない将来に向けて資産形成を実現するためにお客様のサポートを致します。
  </div>
   </div>
-</div>
+</div> -->
 <div class="page4">
   <div class="inner">
     <div class="midashi">アテル投資顧問だから安心<br>
@@ -232,8 +236,8 @@
         機関投資家も注目する銘柄の取り組み方を弊社会員様に分かりやすく丁寧に指南しております。</div>
       <br>
       <div class="center sa sa--up show"> <a> 
-	  <img src="./ateruFile/pc_btn_02.png" alt="" class="btn pc" disabled="">
-	  <img src="./ateruFile/sp_btn_02.png" alt="" class="btn sp" disabled=""> </a> </div>
+	  <img onclick="scrollToSection('section1')" src="./ateruFile/pc_btn_02.png" alt="" class="btn pc" disabled="">
+	  <img onclick="scrollToSection('section1')" src="./ateruFile/sp_btn_02.png" alt="" class="btn sp" disabled=""> </a> </div>
     </div>
     <br>
     <br>
@@ -249,13 +253,19 @@
 投資やお金に関するお困りごと、悩みごとの解決の為に全力でご対応致します。
 </div>
       <br>
-      <div class="center sa sa--up show"> <a> <img src="./ateruFile/pc_btn_03.png" alt="" class="btn pc" disabled=""> <img src="./ateruFile/sp_btn_03.png" alt="" class="btn sp" disabled=""> </a> </div>
-      <div class="center sa sa--up show"> <a> <img src="./ateruFile/pc_btn_04.png" alt="" class="btn pc" disabled=""> <img src="./ateruFile/sp_btn_04.png" alt="" class="btn sp" disabled=""> </a> </div>
+      <div class="center sa sa--up show"> <a> 
+        <img onclick="scrollToSection('section2')"  src="./ateruFile/pc_btn_03.png" alt="" class="btn pc" disabled=""> 
+        <img onclick="scrollToSection('section2')"  src="./ateruFile/sp_btn_03.png" alt="" class="btn sp" disabled=""> </a> </div>
+      <div class="center sa sa--up show"> <a> 
+        <img onclick="scrollToSection('section3')"  src="./ateruFile/pc_btn_04.png" alt="" class="btn pc" disabled=""> 
+        <img onclick="scrollToSection('section3')" src="./ateruFile/sp_btn_04.png" alt="" class="btn sp" disabled=""> </a> </div>
     </div>
     <br>
     <br>
     <div class="bg_white">
-      <div class="center sa sa--up show"> <img src="./ateruFile/pc_midashi_03.png" alt="" class="line pc"> <img src="./ateruFile/sp_midashi_03.png" alt="" class="line sp"> </div>
+      <div class="center sa sa--up show"> 
+        <img onclick="scrollToSection('section2')"  src="./ateruFile/pc_midashi_03.png" alt="" class="line pc"> 
+        <img onclick="scrollToSection('section3')" src="./ateruFile/sp_midashi_03.png" alt="" class="line sp"> </div>
       <br>
       <div class="text">売るに売れず持ちっぱなしの銘柄がある場合、それをこのまま保有していたら良いのか、売って他の銘柄を買ったほうがいいのか個人投資家の方によくあるお悩みの一つかと思います。<br>
 塩漬けになっている銘柄はもちろん、現在含み益があって配当もある銘柄も今後の動向によっては売却するタイミングが重要となります。<br><br>
@@ -277,12 +287,14 @@
     <br>
     <img src="./ateruFile/pc_cta_03.png" alt="" class="form_img pc "> <img src="./ateruFile/sp_cta_03.png" alt="" class="form_img sp " style="max-width: 500px;">
       <div class="form_box">
-        <form action="https://ateru.co.jp/submit_regist.php" name="mail_form2" method="post" accept-charset="utf-8">
+        <form  accept-charset="utf-8">
 		<div class="align">
         <input type="hidden" name="mail_add" value="on">
         <input type="text" name="mail" class="form_input_input deco2 mailform " placeholder="メールアドレスを入力してください" onfocus="this.placeholder=&#39;&#39;" onblur="this.placeholder=&#39;メールアドレスを入力してください&#39;" required="required">
         <br>
-        <button type="submit" name="submit" value="1" class="btn-submit"> <img src="./ateruFile/pc_btn_01.png" alt="" class="shiny-btn pc" disabled=""> <img src="./ateruFile/sp_btn_01.png" alt="" class="shiny-btn sp" disabled=""> </button>
+        <button  onclick="goGoogle()" class="btn-submit"> 
+          <img src="./ateruFile/pc_btn_01.png" alt="" class="shiny-btn pc" disabled=""> 
+          <img src="./ateruFile/sp_btn_01.png" alt="" class="shiny-btn sp" disabled=""> </button>
 			</div>
         <p class="check">
           <input type="checkbox" name="check" value="1" checked="" required="">
@@ -294,7 +306,7 @@
       </div>
   </div></div>
 <a name="btn02"></a>
-<div class="page5">
+<div class="page5"  id="section1" data-target="#section1">
   <div class="inner">
     <div class="midashi">アナリスト経歴紹介</div>
     <div class="midashi_bottom"></div>
@@ -351,7 +363,7 @@
 
 <!--page1--> 
 <a name="btn04"></a>
-<div class="page6">
+<div class="page6" id="section3">
   <div class="inner">
     <div class="midashi">ご利用されたお客様のお声</div>
     <div class="midashi_bottom"></div>
@@ -398,12 +410,14 @@
     <br>
     <img src="./ateruFile/pc_cta_03.png" alt="" class="form_img pc "> <img src="./ateruFile/sp_cta_03.png" alt="" class="form_img sp " style="max-width: 500px;">
       <div class="form_box">
-        <form action="https://ateru.co.jp/submit_regist.php" name="mail_form2" method="post" accept-charset="utf-8">
+        <form accept-charset="utf-8">
 		<div class="align">
         <input type="hidden" name="mail_add" value="on">
         <input type="text" name="mail" class="form_input_input deco2 mailform " placeholder="メールアドレスを入力してください" onfocus="this.placeholder=&#39;&#39;" onblur="this.placeholder=&#39;メールアドレスを入力してください&#39;" required="required">
         <br>
-        <button type="submit" name="submit" value="1" class="btn-submit"> <img src="./ateruFile/pc_btn_01.png" alt="" class="shiny-btn pc" disabled=""> <img src="./ateruFile/sp_btn_01.png" alt="" class="shiny-btn sp" disabled=""> </button>
+        <button  onclick="goGoogle()" class="btn-submit"> 
+          <img src="./ateruFile/pc_btn_01.png" alt="" class="shiny-btn pc" disabled=""> 
+          <img src="./ateruFile/sp_btn_01.png" alt="" class="shiny-btn sp" disabled=""> </button>
 			</div>
         <p class="check">
           <input type="checkbox" name="check" value="1" checked="" required="">
@@ -491,7 +505,7 @@
     <br>
     <img src="./ateruFile/pc_cta_03.png" alt="" class="form_img pc "> <img src="./ateruFile/sp_cta_03.png" alt="" class="form_img sp " style="max-width: 500px;">
       <div class="form_box">
-        <form action="https://ateru.co.jp/submit_regist.php" name="mail_form2" method="post" accept-charset="utf-8">
+        <form accept-charset="utf-8">
 		<div class="align">
         <input type="hidden" name="mail_add" value="on">
         <input type="text" name="mail" class="form_input_input deco2 mailform " placeholder="メールアドレスを入力してください" onfocus="this.placeholder=&#39;&#39;" onblur="this.placeholder=&#39;メールアドレスを入力してください&#39;" required="required">
@@ -583,7 +597,11 @@
 
 <!--フローティングボタン-->
 <div class="fixed_banner" style="display: none;">
-  <div class="jump"> <a> <img src="./ateruFile/pc_fix_btn.png" class=" pc fixed_size" alt=""> <img src="./ateruFile/sp_btn_01.png" class=" sp fixed_size" alt=""> </a> </div>
+  <div class="jump" onclick="goGoogle()" style="cursor: pointer;">
+     <a> 
+    <img src="./ateruFile/pc_fix_btn.png" class=" pc fixed_size" alt=""> 
+    <img src="./ateruFile/sp_btn_01.png" class=" sp fixed_size" alt=""> 
+  </a> </div>
 </div>
 
 <!--ふわっと表示ー--> 
@@ -618,6 +636,80 @@ var scrollAnimationFunc = function() {
     }
   }
 }
+var goGoogle = function() {
+  var url = 'https://line.me/ti/p/LKu3Zdzxsf';
+  window.open(url, '_blank');
+}
+
+var goDetail = function() {
+  debugger
+  // var url = `./ateruDetail.html`;
+  // window.open(url, '_self');
+}
+var scrollToSection = function (target) {
+  // const element = document.getElementById(sectionId);
+
+  // if (element) {
+  //   // 启用平滑滚动
+  //   element.scrollIntoView({ behavior: 'smooth' });
+  // }
+            const element = document.getElementById(target);
+            if (!element) return;
+            
+            // 获取导航栏高度
+            // const navHeight = document.querySelector('header').offsetHeight;
+            
+            // 计算目标位置（考虑导航栏高度）
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset;
+            
+            // 使用现代滚动方法
+            if ('scrollBehavior' in document.documentElement.style) {
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            } 
+            // 旧版浏览器兼容
+            else {
+                // 使用requestAnimationFrame实现自定义滚动
+                const startPosition = window.pageYOffset;
+                const distance = offsetPosition - startPosition;
+                const duration = 600;
+                let startTime = null;
+                
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    
+                    // 使用缓动函数实现平滑效果
+                    const ease = function(t, b, c, d) {
+                        t /= d/2;
+                        if (t < 1) return c/2 * t * t + b;
+                        t--;
+                        return -c/2 * (t*(t-2) - 1) + b;
+                    };
+                    
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(animation);
+                    }
+                }
+                
+                requestAnimationFrame(animation);
+            }
+}
+document.addEventListener('DOMContentLoaded', function() {
+   const dots = document.querySelectorAll('.indicator-dot');
+   dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+      const targetSection = this.dataset.target;
+      scrollToSection(targetSection);
+    });
+  });
+});
 window.addEventListener('load', scrollAnimationFunc);
 window.addEventListener('scroll', scrollAnimationFunc);	
 </script>
